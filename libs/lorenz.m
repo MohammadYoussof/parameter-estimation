@@ -21,18 +21,18 @@ end
 
 if nargin<4
   eps = 0.000001;
-  T = [0 25];
+  T = [0 100];
   initV = [0 1 1.05];
 end
 
 options = odeset('RelTol',eps,'AbsTol',[eps eps eps/10]);
 [T,X] = ode45(@(T,X) F(T, X, sigma, rho, beta), T, initV, options);
 
-plot3(X(:,1),X(:,2),X(:,3));
-axis equal;
-grid;
-title('Lorenz attractor');
-xlabel('X'); ylabel('Y'); zlabel('Z');
+% plot3(X(:,1),X(:,2),X(:,3));
+% axis equal;
+% grid;
+% title('Lorenz attractor');
+% xlabel('X'); ylabel('Y'); zlabel('Z');
 
 x = X(:,1);
 y = X(:,2);
