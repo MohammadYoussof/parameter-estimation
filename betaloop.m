@@ -8,3 +8,14 @@ for i = 1:300
     [rows, columns] = size(X);
     data(i, 1:columns) = X(1, :);
 end;
+
+j = 1
+for i = 1:22689
+    small = min(abs(data(:, i)));
+    if small == 0;
+        small2(j, 1) = i;
+        j = j+1;
+    end
+end
+
+min(small2)
