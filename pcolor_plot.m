@@ -6,9 +6,9 @@ for b = 1:300
     prod = Z.*W(idx:idx + 299, 1);
 %     figure(b)
 %     plot(W(idx:idx + 299, 1))
-    FT = fftshift(fft(prod));
+    FT = abs(fftshift(fft(prod)));
     C(:, b) = 10.*log10(FT);
 end
 
-C = abs(C);
+% C = abs(C);
 pcolor(C)
