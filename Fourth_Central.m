@@ -9,7 +9,7 @@ for NR = 1:300
 end
 
 for row = 2:300
-    derivative(row) = (expectation(row)-expectation(row-1))/(beta(row)-beta(row-1));
+    derivative(row) = ((expectation(row)-expectation(row-1))/(beta(row)-beta(row-1)));
 end
 
 plot(beta, derivative)

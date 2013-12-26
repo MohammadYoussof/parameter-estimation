@@ -1,0 +1,98 @@
+\documentclass{article}[11pt]
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in,nohead]{geometry}              		
+\geometry{letterpaper}
+
+\usepackage{graphicx, grffile}														
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{soul}
+\usepackage{float, multirow, tabulary}
+\usepackage{subcaption}
+
+\newcommand{\bp}[1] {\left( #1 \right)}
+\newcommand{\bb}[1] {\left[ #1 \right]}
+\newcommand{\ba}[1]{\left| #1 \right|}
+\newcommand{\infint}{\int_{-\infty}^\infty}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{0.5em}{}
+  
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{\thesubsubsection}{0.5em}{}  
+  
+\titlespacing{\section}{0pt}{0pt}{2pt}
+
+%\newcommand{\kbcom}[1]{
+%\textcolor{blue}{\textbf{\textit{\ul{#1}}}}}
+%
+%\newcommand{\blcom}[1]{
+%\textcolor{red}{\textbf{\textit{\ul{#1}}}}}         
+%
+%\newcommand{\llcom}[1]{
+%\textcolor{Orange}{\textbf{\textit{\ul{#1}}}}}
+%
+%\newcommand{\tlcom}[1]{
+%\textcolor{LimeGreen}{\textbf{\textit{\ul{#1}}}}} 
+
+\newcommand{\Matlab}{\textsc{Matlab}}
+
+\title{Final Report on Analyzing Time-Frequency Methods and Unsupervised Clustering Algorithms for Footstep Classification}
+\author{Brett Larsen and Ajay Karpur}
+\date{}
+
+
+%%%
+
+\begin{document}
+\maketitle
+\doublespace
+
+%\vspace{-30pt}
+
+\begin{abstract}
+The purpose of this project was to determine if vibration signals could be detected and classified for purposes such as security along borders or other sensitive boundaries. To this end, the goal was to see if footsteps could be correctly detected and classified within different groups. Many different analysis techniques were to be attempted, and then feature extraction and classification was performed on the outputs. It was found that RID, WD, and MPD were successful in distinguishing an adult from a child, an adult running from an adult walking, a child running from a child walking, and two adults versus three adults.  Future work will include the investigation of other feature extraction methods and unsupervised clustering.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+The problem of detecting and classifying vibration signals produced by footsteps has applications in a variety of areas, especially in those associated with national security. These applications include that of alerting authorities to activity along a  border or around a nuclear power plant or even around an entire base in hostile territory. To this end, the goal of this project is to accurately detect and classify different classes of footsteps without false positives caused by friendly forces or natural elements such as animal traffic or blowing plant life (e.g. tumbleweeds). In order to observe the feasibility of time-frequency techniques in such classification purposes, an attempt will be made to detect and classify different movement patterns produced by different groups of adults, children and animals, both walking and running. This data will be analyzed using techniques such as the Spectrogram, Ambiguity Function, Wigner Distribution, Reduced Interference Distribution, as well as matching pursuit decomposition. Features will be extracted from the outputs of these methods and used to classify the signals.
+
+In Section \ref{sec:background} the background and motivation of the project is discussed. The methods of data acquisition by the team are discussed in Section \ref{sec:data}, and Section \ref{sec:methods} delineates how the data was processed to complete the main goal of footstep classification.  In Section \ref{sec:results}, the results gained from \Matlab \ are provided and discussed. Section \ref{sec:work} describes the work that each team member accomplished through the course of this project.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-10pt}
+\section{Background}
+\label{sec:background}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-10pt}
+\section{Methods}
+\label{sec:methods}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-10pt}
+\section{Results}
+\label{sec:results}
+
+ 
+
+%\vspace{-10pt}
+\section{Conclusions and Future Work}
+\label{sec:conclusion}
+
+
+\section{Acknowledgements}
+\label{sec:Ack}
+The team would like to acknowledge Dr. Narayan Kovvali and Dr. Antonia Papandreou for contributing the starting Matlab code for Matching Pursuit Decomposition.  In addition, the team would like to thank Stavros Papandreou for his help in collecting seismic signals as well as Vipin Vijayan for his Direct LDA toolbox \cite{Vijayan}
+
+
+%Bibliography
+\bibliographystyle{IEEEtran}
+\bibliography{proposal_refs.bib}
+
+\end{document}
