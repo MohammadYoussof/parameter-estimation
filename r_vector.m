@@ -1,3 +1,4 @@
+%X = X';
 R = sqrt(X.^2 + Y.^2 + Z.^2);
 R_length = size(R);
 t = 1:R_length;
@@ -7,7 +8,7 @@ plot (t,R')
 %--------------------------------
 
 for i = 1:300
-    data(i, 1:columns) = X(1, :);
+    data(i, 1:columns) = R(1, :);
 end;
 
 j = 1;

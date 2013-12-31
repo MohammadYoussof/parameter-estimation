@@ -38,7 +38,7 @@
 
 \newcommand{\Matlab}{\textsc{Matlab}}
 
-\title{Final Report on Analyzing Time-Frequency Methods and Unsupervised Clustering Algorithms for Footstep Classification}
+\title{Final Report on Parameter Estimation for Nonlinear Dynamical Systems}
 \author{Brett Larsen and Ajay Karpur}
 \date{}
 
@@ -52,19 +52,18 @@
 %\vspace{-30pt}
 
 \begin{abstract}
-The purpose of this project was to determine if vibration signals could be detected and classified for purposes such as security along borders or other sensitive boundaries. To this end, the goal was to see if footsteps could be correctly detected and classified within different groups. Many different analysis techniques were to be attempted, and then feature extraction and classification was performed on the outputs. It was found that RID, WD, and MPD were successful in distinguishing an adult from a child, an adult running from an adult walking, a child running from a child walking, and two adults versus three adults.  Future work will include the investigation of other feature extraction methods and unsupervised clustering.
+The purpose of this project was to explore the methods by which one could estimate the values of parameters underlying a nonlinear dynamical system. To accomplish this, we examined the parameter $\beta$ underlying a simulation of the Lorenz system in \Matlab.
 \end{abstract}
 
 \section{Introduction}
 \label{sec:intro}
-The problem of detecting and classifying vibration signals produced by footsteps has applications in a variety of areas, especially in those associated with national security. These applications include that of alerting authorities to activity along a  border or around a nuclear power plant or even around an entire base in hostile territory. To this end, the goal of this project is to accurately detect and classify different classes of footsteps without false positives caused by friendly forces or natural elements such as animal traffic or blowing plant life (e.g. tumbleweeds). In order to observe the feasibility of time-frequency techniques in such classification purposes, an attempt will be made to detect and classify different movement patterns produced by different groups of adults, children and animals, both walking and running. This data will be analyzed using techniques such as the Spectrogram, Ambiguity Function, Wigner Distribution, Reduced Interference Distribution, as well as matching pursuit decomposition. Features will be extracted from the outputs of these methods and used to classify the signals.
+In estimation theory, parameter estimation is used to determine approximate values of parameters from a set of measured data that have some degree of randomness. By estimating the value of these parameters, one can approximate the conditions underlying some system. Parameter estimation has applications in a variety of engineering problems. When mathematical models are used to describe biological or other nonlinear dynamical phenomena, these models often contain some parameters that cannot be directly quantified or calculated. In these cases, the parameters can be estimated using the available data.
 
-In Section \ref{sec:background} the background and motivation of the project is discussed. The methods of data acquisition by the team are discussed in Section \ref{sec:data}, and Section \ref{sec:methods} delineates how the data was processed to complete the main goal of footstep classification.  In Section \ref{sec:results}, the results gained from \Matlab \ are provided and discussed. Section \ref{sec:work} describes the work that each team member accomplished through the course of this project.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\vspace{-10pt}
-\section{Background}
-\label{sec:background}
+%\section{Background}
+%\label{sec:background}
 
 
 
@@ -72,6 +71,8 @@ In Section \ref{sec:background} the background and motivation of the project is 
 %\vspace{-10pt}
 \section{Methods}
 \label{sec:methods}
+
+To acquire random data, we used a \Matlab \ simulation of the Lorenz system.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -82,13 +83,13 @@ In Section \ref{sec:background} the background and motivation of the project is 
  
 
 %\vspace{-10pt}
-\section{Conclusions and Future Work}
+\section{Conclusions}
 \label{sec:conclusion}
 
 
 \section{Acknowledgements}
 \label{sec:Ack}
-The team would like to acknowledge Dr. Narayan Kovvali and Dr. Antonia Papandreou for contributing the starting Matlab code for Matching Pursuit Decomposition.  In addition, the team would like to thank Stavros Papandreou for his help in collecting seismic signals as well as Vipin Vijayan for his Direct LDA toolbox \cite{Vijayan}
+We would like to acknowledge Moiseev Igor for the open source \Matlab \ Lorenz system generator.
 
 
 %Bibliography
