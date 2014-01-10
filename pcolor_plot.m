@@ -1,14 +1,12 @@
-Z = data(:, 75);
-W = gausswin(600, 15);
+Z = data';
+W = hamming(10000);
 
 for b = 1:300
-    idx  = 301 - b;
-    prod = Z.*W(idx:idx + 299, 1);
-%     figure(b)
-%     plot(W(idx:idx + 299, 1))
+    prod = Z(1:10000,b).*W;
     FT = abs(fftshift(fft(prod)));
     C(:, b) = 10.*log10(FT);
 end
 
-% C = abs(C);
+figure(1)
 pcolor(C)
+
