@@ -9,4 +9,5 @@ end
 
 figure(1)
 pcolor(C)
-
+shading flat
+colorbar

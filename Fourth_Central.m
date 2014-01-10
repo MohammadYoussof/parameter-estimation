@@ -12,4 +12,10 @@ for row = 2:300
     derivative(row) = ((expectation(row)-expectation(row-1))/(beta(row)-beta(row-1)));
 end
 
-plot(beta, derivative)
+%dbderivative = 20*log(derivative)
+plot(beta, dbderivative)
+xlabel('Value of Beta')
+ylabel('Sensitivity of Moment (in dB)')
+title('Sensitivity of Sixth Central Moment to Beta')
+
+print(gcf, '-dpdf', '-r600', 'figure1.pdf')

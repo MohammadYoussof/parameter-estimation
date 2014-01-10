@@ -1,5 +1,5 @@
 i = 1;
-beta = linspace(1, 10, 300);
+beta = linspace(1, 100, 300);
 data = zeros(300, 10000);
 
 for i = 1:300
