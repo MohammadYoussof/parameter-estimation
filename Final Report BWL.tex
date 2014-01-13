@@ -89,7 +89,9 @@ The purpose of this project is to examine the sensitivity of the Lorenz system a
 \section{Methods}
 \label{sec:methods}
 
-To acquire random data, we used a \Matlab \ simulation of the Lorenz system.
+To acquire random data, we used a \Matlab \ simulation of the Lorenz system. We generated a matrix of this data for values of $\beta$ between 1 and 10, first using just the data from the X vector (the position of the Lorenz system projected onto the x axis). To find a good sensitivity for $\beta$, we found the fourth central moment for each evolution of the Lorenz system and plotted these against $\beta$ (See figure~\ref{fig:4thX}). We did the same with the sixth central moment (figure~\ref{fig:6thX}).
+
+We then looked at the evolution of the R vector, where $R = \sqrt{X^2 + Y^2 + Z^2}$ (figure~\ref{fig:REvolution}). We plotted the fourth and sixth central moments again, this time using the R vector (figures \ref{fig:4thR} and \ref{fig:6thR} respectively).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,15 +102,35 @@ To acquire random data, we used a \Matlab \ simulation of the Lorenz system.
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.6]{SensitivityFourth.png}
-\caption{Example of an WD TFR}
-\label{fig:WDTFR}
+\caption{4th central moment sensitivity using X vector}
+\label{fig:4thX}
 \end{figure}
 \begin{figure}[H]
 \centering
 \includegraphics[scale = 0.6]{SensitivitySixth.png}
-\caption{Example of an WD TFR}
-\label{fig:WDTFR2}
+\caption{6th central moment sensitivity using X vector}
+\label{fig:6thX}
 \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.6]{REvolution.png}
+\caption{Evolution of R vector for $\beta = 8/3$}
+\label{fig:REvolution}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.6]{RSensitivityFourth.png}
+\caption{4th central moment sensitivity using R vector}
+\label{fig:4thR}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale = 0.6]{RSensitivitySixth.png}
+\caption{6th central moment sensitivity using R vector}
+\label{fig:6thR}
+\end{figure}
+
+%pcolor plot here
 
 %\vspace{-10pt}
 \section{Conclusions}
