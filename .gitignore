@@ -217,3 +217,7 @@ pip-log.txt
 *.bbl
 *.blg
 *.gz
+
+*.tex
+*.bst
+*.bib
